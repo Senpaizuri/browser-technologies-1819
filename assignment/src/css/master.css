@@ -1,0 +1,24 @@
+*, *:before, *:after {
+    border: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Josefin sans', sans-serif;
+    font-display: swap;
+    color: inherit;
+    font-style: normal;
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+canvas{
+    height: 100%;
+    width: 50%;
+    min-width: 20rem;
+    max-width: 30rem;
+    margin: auto;
+    image-rendering: crisp-edges;
+}
