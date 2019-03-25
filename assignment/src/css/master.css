@@ -20,5 +20,7 @@ canvas{
     min-width: 20rem;
     max-width: 30rem;
     margin: auto;
+    display: block;
     image-rendering: crisp-edges;
+    image-rendering: pixelated;
 }

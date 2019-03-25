@@ -30,7 +30,7 @@ const audio = {
                 let err = true     
                 if(err){
                     try {
-                        let newFrame = canvasCtx.createImageData(16,16)
+                        let newFrame = canvasCtx.createImageData(32,8)
                         requestAnimationFrame(renderFrame)
                         analyser.getByteFrequencyData(frequencyData)
                         for (let i = 0; i < newFrame.data.length; i++) {
