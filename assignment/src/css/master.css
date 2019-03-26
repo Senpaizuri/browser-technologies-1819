@@ -7,11 +7,23 @@
     box-sizing: border-box;
     font-family: 'Josefin sans', sans-serif;
     font-display: swap;
-    color: inherit;
     font-style: normal;
     position: relative;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+
+.hide{
+    display: none;
+    visibility: hidden; 
+}
+
+body{
+    background: #27493D;
+    color: #ede5a6;
+    text-align: center;
+    padding: 1rem 2rem;
 }
 
 canvas{
@@ -23,4 +35,9 @@ canvas{
     display: block;
     image-rendering: crisp-edges;
     image-rendering: pixelated;
+}
+
+input,
+button{
+    padding: .5rem 1rem;
 }

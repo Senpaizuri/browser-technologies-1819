@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Beatboxer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="/src/css/master.css">
+</head>
+<body>
+    <header>
+        <h1>
+            Beatbox tunes
+        </h1>
+        <h2>
+            Beep Boop
+        </h2>
+    </header>
+    <ul>
+        <li>
+            <h3>Basic Loop [83 BPM]</h3>
+            <audio id="" src="src/assets/sounds/preset/83bpm-basic.wav" controls loop></audio>
+        </li>
+        <li>
+            <h3>Hip hop Loop [95 BPM]</h3>
+            <audio id="" src="src/assets/sounds/preset/95bpm-hiphop.wav" controls loop></audio>
+        </li>
+        <li>
+            <h3>Passion Beat [95 BPM]</h3>
+            <audio id="" src="src/assets/sounds/preset/95bpm-passionbeat.wav" controls loop></audio>
+        </li>
+    </ul>
+    <div id="trackList">
+        <h1>Generate Different Track</h1>
+        <form action="/tracks.html">
+            <select name="genre" id="">
+                <option value="reggae">Reggae</option>
+                <option value="pop">Pop</option>
+                <option value="instrumental">instrumental</option>
+            </select>
+            <input type="number" name="bpm" value="90">
+            <input type="submit" value="Get Track">
+        </form>
+    </div>
+</body>
+</html>

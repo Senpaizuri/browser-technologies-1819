@@ -18,27 +18,20 @@
             </h2>
         </header>
         <div id="beatbox">
-            <div id="app">
-                <canvas height="8" width="32" id="canvas"></canvas>
-            </div>
-            <audio src="" id="audio-element" controls loop></audio>
-            <input type="number" value="90">
         </div>
-        <ul>
-            <li>
-                <h3>Basic Loop [83 BPM]</h3>
-                <audio id="" src="src/assets/sounds/preset/83bpm-basic.wav" controls loop></audio>
-            </li>
-            <li>
-                <h3>Hip hop Loop [95 BPM]</h3>
-                <audio id="" src="src/assets/sounds/preset/95bpm-hiphop.wav" controls loop></audio>
-            </li>
-            <li>
-                <h3>Passion Beat [95 BPM]</h3>
-                <audio id="" src="src/assets/sounds/preset/95bpm-passionbeat.wav" controls loop></audio>
-            </li>
-        </ul>
+        <div id="trackList">
+            <h1>Generate a track</h1>
+            <form action="/tracks.html">
+                <datalist name="genre" id="">
+                    <option value="reggae">Reggae</option>
+                    <option value="pop">Pop</option>
+                    <option value="instrumental">instrumental</option>
+                </datalist>
+                <input type="number" name="bpm" value="90">
+                <input type="submit" value="Get Track">
+            </form>
+        </div>
     </main>
-    <script src="src/js/app.js" type="module"></script>
+    <script src="src/js/app.js" type="module"></script> 
 </body>
 </html>
