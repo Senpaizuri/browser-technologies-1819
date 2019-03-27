@@ -11,9 +11,17 @@
                 <audio src="" id="audio-element" controls loop></audio>
                 <div id="controls"></div>
                 <div id="keypad"></div>
-                <input type="number" id="bpm" value="90">
+                <label>
+                    Record in # BPM
+                    <input type="number" id="bpm" value="90">
+                </label>
+                </br>
                 <span>All Meassures are in 4/4</span>
-                <input type="number" id="measure" value="1">
+                </br>
+                <label>
+                    Record # meassures
+                    <input type="number" id="measure" value="1">
+                </label>
                 <a href="tracks.html>Use a preset</a>`
                 audio.init()
             }else{
