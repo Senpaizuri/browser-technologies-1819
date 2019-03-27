@@ -1,4 +1,4 @@
-(()=>{
+(function(){
     const app = {
         init:function(){
             console.log("Booting app")
