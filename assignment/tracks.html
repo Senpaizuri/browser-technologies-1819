@@ -31,15 +31,19 @@
         </li>
     </ul>
     <div id="trackList">
-        <h1>Generate Different Track</h1>
+        <h2>Generate Different Track</h2>
         <form action="/tracks.html">
-            <select name="genre" id="">
+            <label for="genre">Select a genre:</label>
+            <select name="genre" id="genre">
                 <option value="reggae">Reggae</option>
                 <option value="pop">Pop</option>
                 <option value="instrumental">instrumental</option>
             </select>
-            <input type="number" name="bpm" value="90">
-            <input type="submit" value="Get Track">
+            <label for="bpm">
+                Set the prefered BPM:
+                <input type="number" name="bpm" value="90">
+            </label>
+            <button type="submit">Get Tracks</button>
         </form>
     </div>
 </body>

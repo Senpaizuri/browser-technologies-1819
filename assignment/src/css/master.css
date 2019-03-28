@@ -3,7 +3,6 @@
     margin: 0;
     padding: 0;
     list-style: none;
-    text-decoration: none;
     box-sizing: border-box;
     font-family: 'Josefin sans', sans-serif;
     font-display: swap;
@@ -26,6 +25,18 @@ body{
     padding: 1rem 2rem;
 }
 
+a:visited{
+    color: red;
+}
+
+a{
+    color: #ede5a6;
+}
+
+a:focus{
+    color: white;
+}
+
 canvas{
     height: 100%;
     width: 50%;
@@ -40,4 +51,57 @@ canvas{
 input,
 button{
     padding: .5rem 1rem;
+}
+
+#keypad{
+    display: block;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 15rem;
+    margin: 1rem auto;
+}
+
+#keypad button{
+    margin: .5rem;
+    display: inline-block;
+    transition: .3s ease all;
+}
+
+#keypad button.playing{
+    filter: invert(1);
+}
+
+#bpmTracker,
+#bpmTracker div{
+    height: 2rem;
+    width: 2rem;
+    border: 1px solid rgba(255,255,255,.5);
+    border-radius: 50%;
+    margin: 1rem auto;
+}
+
+#bpmTracker div{
+    left: -1px;
+    top: -1px;
+    position: absolute;
+    margin: 0;
+    content: "";
+    display: block;
+    animation: grow .6667s linear infinite forwards;
+    border: 3px solid rgba(255,255,255,1);
+}
+
+label{
+    margin: 1.25rem auto;
+    display: block;
+}
+
+@keyframes grow{
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
 }

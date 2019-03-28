@@ -5,24 +5,30 @@
             if("AudioContext" in window){
                 document.getElementById("trackList").remove()
                 document.getElementById("beatbox").innerHTML =
-                `<div id="app">
+                `
+                <div id="app">
                     <canvas height="8" width="32" id="canvas"></canvas>
                 </div>
                 <audio src="" id="audio-element" controls loop></audio>
                 <div id="controls"></div>
                 <div id="keypad"></div>
-                <label>
-                    Record in # BPM
-                    <input type="number" id="bpm" value="90">
-                </label>
+                
                 </br>
                 <span>All Meassures are in 4/4</span>
                 </br>
-                <label>
-                    Record # meassures
+                <label for="measure">
+                    Record
                     <input type="number" id="measure" value="1">
+                    meassure(s)
                 </label>
-                <a href="tracks.html>Use a preset</a>`
+                <label for="bpm">
+                    Record in 
+                    <input type="number" id="bpm" value="90">
+                    BPM
+                    <div id="bpmTracker"><div></div></div>
+                </label>
+                <a href="tracks.html">Use a preset song</a>
+                `
                 audio.init()
             }else{
                 console.log("Audio Api is not supported")
@@ -132,6 +138,14 @@
         },
         controller:function(){
             const recorder = document.createElement("button")
+            const bpmTracker = document.querySelector("#bpmTracker div")
+            const curBpm = document.getElementById("bpm")
+
+            curBpm.addEventListener("change",function(e){
+                let val = this.value
+                bpmTracker.setAttribute("data-interval",val)
+                bpmTracker.style.setProperty("animation-duration",`${((1/val)*60)}s`)
+            })
 
             recorder.innerText = "Record"
         

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,18 +19,22 @@
         </header>
         <div id="beatbox">
         </div>
-        <div id="trackList">
-            <h1>Generate a track</h1>
+        <section id="trackList">
+            <h2>Generate a track</h2>
             <form action="./tracks.html">
-                <datalist name="genre" id="">
+                <label for="genre">Select a genre:</label>
+                <select name="genre" id="genre">
                     <option value="reggae">Reggae</option>
                     <option value="pop">Pop</option>
                     <option value="instrumental">instrumental</option>
-                </datalist>
-                <input type="number" name="bpm" value="90">
-                <input type="submit" value="Get Track">
+                </select>
+                <label for="trackBpm">
+                    Set the prefered BPM:
+                    <input type="number" name="bpm" id="trackBpm" value="90">
+                </label>
+                <button type="submit">Get track</button>
             </form>
-        </div>
+        </section>
     </main>
     <script src="src/js/app.js" type="module"></script> 
 </body>
