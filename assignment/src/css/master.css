@@ -51,6 +51,15 @@ canvas{
 input,
 button{
     padding: .5rem 1rem;
+    border-radius: 5px;
+}
+
+button span{
+    display: none;
+}
+
+button.playing span{
+    display: inline;
 }
 
 #keypad{
@@ -66,10 +75,6 @@ button{
     margin: .5rem;
     display: inline-block;
     transition: .3s ease all;
-}
-
-#keypad button.playing{
-    filter: invert(1);
 }
 
 #bpmTracker,

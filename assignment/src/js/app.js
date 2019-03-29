@@ -9,7 +9,10 @@
                 <div id="app">
                     <canvas height="8" width="32" id="canvas"></canvas>
                 </div>
-                <audio src="" id="audio-element" controls loop></audio>
+                <section>
+                    <h2>Preview latest audio clip</h2>
+                    <audio src="" id="audio-element" controls loop></audio>
+                </section>
                 <div id="controls"></div>
                 <div id="keypad"></div>
                 
@@ -108,6 +111,8 @@
                 console.log(mic)
                 const 
                     audioChunks = []
+                    
+                document.querySelector("#controls button").innerText = "Recording..."
 
                 mic.addEventListener("dataavailable",(e)=>{
                     audioChunks.push(e.data)
@@ -132,6 +137,7 @@
                 })
                 setTimeout(() => {
                     mic.stop()
+                    document.querySelector("#controls button").innerText = "Record audio snippet"
                 }, (1/bpm*60)*4000*measure)
 
             })
@@ -147,7 +153,7 @@
                 bpmTracker.style.setProperty("animation-duration",`${((1/val)*60)}s`)
             })
 
-            recorder.innerText = "Record"
+            recorder.innerText = "Record audio snippet"
         
             recorder.addEventListener("click",function(){
                 try{
@@ -168,7 +174,8 @@
 
                 clip.setAttribute("loop","true")
                 
-                newKey.innerHTML = `Clip ${index + 1}`
+                newKey.innerHTML = `<span>Playing </span>Clip ${index + 1}`
+                newKey.setAttribute("data-clip",`Clip ${index + 1}`)
                 newKey.append(clip)
                 
                 newKey.addEventListener("click",function(){
