@@ -55,6 +55,7 @@ input,
 button{
     padding: .5rem 1rem;
     border-radius: 5px;
+    font-size: 1rem;
 }
 
 button span{
