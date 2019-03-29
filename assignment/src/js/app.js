@@ -114,11 +114,11 @@
                     
                 document.querySelector("#controls button").innerText = "Recording..."
 
-                mic.addEventListener("dataavailable",(e)=>{
+                mic.addEventListener("dataavailable",function(e){
                     audioChunks.push(e.data)
                     console.log(audioChunks)
                 })
-                mic.addEventListener("stop",(e)=>{
+                mic.addEventListener("stop",function(e){
                     let 
                         audioBlob = new Blob(audioChunks),
                         audioUrl  = URL.createObjectURL(audioBlob),
@@ -135,7 +135,7 @@
                     audio.pad()
 
                 })
-                setTimeout(() => {
+                setTimeout(function(){
                     mic.stop()
                     document.querySelector("#controls button").innerText = "Record audio snippet"
                 }, (1/bpm*60)*4000*measure)
